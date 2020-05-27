@@ -1,0 +1,22 @@
+{
+  "name": "t-online-me",
+  "version": "1.0.0",
+  "description": "this is cool",
+  "homepage":"https://github.com/findermradeco/react-t-0nline.git",
+  "main": "index.php",
+  "scripts": {
+    "test": "good",
+    "predeploy":"npm run build",
+    "build":"react-scripts build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/findermradeco/react-t-0nline.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/findermradeco/react-t-0nline/issues"
+  },
+  "homepage": "https://github.com/findermradeco/react-t-0nline#readme"
+}

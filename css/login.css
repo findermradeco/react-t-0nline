@@ -1,0 +1,599 @@
+/* ------------------------------------------------------------------------ */
+/* Pixel Density BreakPoints												*/
+/* ------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------ */
+/* Grid generator mixin											            */
+/* ------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------ */
+/* Common																	*/
+/* ------------------------------------------------------------------------ */
+
+.tbs-container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 504px;
+    padding: 0 12px;
+}
+
+.tbs-absolute {
+    position: absolute;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.tbs-full-width {
+    width: 100%;
+}
+
+.tbs-half-width {
+    width: 50%;
+}
+
+.tbs-line-height-32 {
+    line-height: 32px;
+}
+
+.tbs-relative {
+    position: relative;
+}
+
+.tbs-text-upper {
+    text-transform: uppercase;
+}
+
+.tbs-text-zero {
+    font-size: 0;
+}
+
+.tbs-text-1em {
+    line-height: 1em;
+}
+
+.tbs-text-11 {
+    font-size: 11px;
+}
+
+/* ------------------------------------------------------------------------ */
+/* Toolbox  															*/
+/* ------------------------------------------------------------------------ */
+.form-input-set {
+    color: #757575;
+    position: relative;
+    margin-bottom: 6px;
+}
+
+.form-input-set label {
+    bottom: 1px;
+    cursor: text;
+    font-size: 18px;
+    left: 12px;
+    line-height: 54px;
+    position: absolute;
+    -moz-transition: all linear 0.1s;
+    -o-transition: all linear 0.1s;
+    -webkit-transition: all linear 0.1s;
+    transition: all linear 0.1s;
+}
+
+.form-input-set .form-input {
+    height: 54px;
+    margin-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 24px;
+    padding-bottom: 6px;
+    border-radius: 3px;
+    /* workaround when the input field is auto filled in Chrome */
+}
+
+.form-input-set .form-input ~ .info-question-icon {
+    background-color: rgba(0, 160, 222, 0.2);
+    border-radius: 3px;
+    bottom: 6px;
+    cursor: pointer;
+    font-style: normal;
+    font-size: 18px;
+    height: 42px;
+    line-height: 42px;
+    position: absolute;
+    opacity: 0;
+    right: 6px;
+    text-align: center;
+    width: 30px;
+}
+
+.form-input-set .form-input ~ .info-question-icon:before {
+    content: '?';
+    line-height: 24px;
+    outline: 0;
+}
+
+.form-input-set .form-input.static {
+    background-color: #EDEDED;
+    border: none;
+    padding-bottom: 28px;
+    padding-top: 24px;
+}
+
+.form-input-set .form-input:active {
+    background-color: #D0D0D0;
+}
+
+.form-input-set .form-input:focus {
+    border-color: #00A0DE;
+    padding-right: 42px;
+}
+
+.form-input-set .form-input:focus ~ .info-question-icon {
+    opacity: 1;
+}
+
+.form-input-set .form-input:disabled, .form-input-set .form-input:read-only {
+    background-color: #EDEDED;
+}
+
+.form-input-set .form-input:-webkit-autofill ~ label {
+    bottom: 30px;
+    line-height: 1em;
+    font-size: 15px;
+}
+
+.form-input-set.error .form-input {
+    border-color: #D90000;
+    background-color: rgba(217, 0, 0, 0.05);
+}
+
+.form-input-set.floating label {
+    bottom: 30px;
+    line-height: 1em;
+    font-size: 15px;
+}
+
+.sublink {
+    color: #007FAF;
+    font-size: 15px;
+}
+
+.btn {
+    margin-bottom: 12px;
+}
+
+.btn.btn-gray {
+    background-color: #EDEDED;
+    border-color: #B2B2B2;
+}
+
+.btn.btn-gray:focus {
+    background-color: #DCDCDC;
+    outline: 0 auto #B2B2B2;
+}
+
+.btn.btn-gray:active {
+    background-color: #D9D9D9;
+}
+
+.btn-link {
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+.btn-link:hover {
+    text-decoration: underline;
+}
+
+
+.copy-text {
+    margin-bottom: 12px;
+}
+
+.info-box {
+    background-color: rgba(0, 160, 222, 0.1);
+    border-radius: 4px;
+    display: none;
+    font-size: 15px;
+    margin-bottom: 12px;
+    padding: 12px;
+}
+
+.info-box.error {
+    background-color: rgba(217, 0, 0, 0.1);
+    color: #D90000;
+    display: block;
+}
+
+/* ------------------------------------------------------------------------ */
+/* Header																	*/
+/* ------------------------------------------------------------------------ */
+#tbs-header {
+    height: 84px;
+    margin-bottom: 60px;
+}
+
+#tbs-header #tbs-header-content {
+    background-color: #E20074;
+    color: #fff;
+    height: inherit;
+    left: 0;
+    line-height: 84px;
+    overflow: hidden;
+    padding: 0 12px;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+body.scrolled #tbs-header #tbs-header-content {
+    height: 4px;
+    position: fixed;
+}
+
+#tbs-nav {
+    height: 72px;
+    margin-top: -12px;
+}
+
+#tbs-nav #tbs-nav-content {
+    background-color: #FFF;
+    border-bottom: 1px solid #DCDCDC;
+    line-height: 72px;
+    padding-left: 24px;
+    padding-right: 24px;
+    width: 100%;
+}
+
+#tbs-nav #tbs-nav-content .pull-left {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+body.scrolled #tbs-nav #tbs-nav-content {
+    height: 72px;
+    position: fixed;
+    top: 4px;
+    margin-top: 0;
+    z-index: 1;
+}
+
+/* ------------------------------------------------------------------------ */
+/* Footer																	*/
+/* ------------------------------------------------------------------------ */
+#tbs-footer {
+    background-color: #FFFFFF;
+    border-top: 1px solid #DCDCDC;
+    color: #757575;
+    border-top-width: 1px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+#tbs-footer.sticky {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
+
+#tbs-footer .footer-content a {
+    color: #757575;
+}
+
+#tbs-footer .footer-content a#data-protection {
+    margin-left: 24px;
+}
+
+#tbs-footer .footer-content a#data-protection:before {
+    background: url("../images/data_protection.svg");
+    background-size: 100%;
+    content: "";
+    display: inline-block;
+    height: 17px;
+    margin-right: 6px;
+    vertical-align: middle;
+    width: 17px;
+}
+
+#tbs-headline h1 {
+    color: #6C6C6C;
+    font-size: 48px;
+    font-weight: 200;
+    line-height: 58px;
+    margin: 0;
+    margin-bottom: 36px;
+    padding: 0;
+    text-align: center;
+}
+
+#tbs-headline h1.info {
+    margin-bototm: 0;
+}
+
+#tbs-headline h1.error:before {
+    content: " ";
+    background: url("/static/factorx/vdplus/images/error.svg");
+    background-size: 100%;
+    height: 60px;
+    left: -66px;
+    position: absolute;
+    width: 60px;
+}
+
+#tbs-headline h4 {
+    font-weight: bold;
+    line-height: 25px;
+    margin: 0px;
+    padding-bottom: 0px;
+    text-transform: uppercase;
+}
+
+#tbs-headline h5 {
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    top: 6px;
+    margin-bottom: 36px;
+}
+
+#tbs-headline #tbs-brand {
+    line-height: 1.5em;
+    padding-bottom: 36px;
+}
+
+#tbs-headline #tbs-brand img {
+    max-width: 40%;
+    max-height: 4.5em;
+    vertical-align: middle;
+    width: auto;
+}
+
+#service-tiles {
+    height: 156px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+#service-tiles .tile {
+    background-color: #FFFFFF;
+    border: 1px solid #E6E6E6;
+    color: #383838;
+    cursor: pointer;
+    display: table;
+    float: left;
+    height: 100%;
+    vertical-align: middle;
+    text-decoration: none;
+    width: 33.3%;
+}
+
+#service-tiles .tile:not(:last-child) {
+    border-right: none;
+}
+
+#service-tiles .tile:hover {
+    background-color: #EDEDED;
+}
+
+#service-tiles .tile .tile-content {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#service-tiles .tile .tile-content img {
+    box-sizing: content-box;
+    height: 52px;
+    padding: 18px;
+    width: 52px;
+}
+
+#service-tiles .tile .tile-content p {
+    font-size: 18px;
+    line-height: 21px;
+    padding: 0;
+}
+
+/* ------------------------------------------------------------------------ */
+/* Login-Box																*/
+/* ------------------------------------------------------------------------ */
+#pw_submit {
+    position: relative;
+}
+
+#pw_submit[disabled]:after {
+    background: url("../images/load.gif") no-repeat;
+    background-size: cover;
+    bottom: 0;
+    content: '';
+    height: 24px;
+    margin: auto 0;
+    position: absolute;
+    right: -36px;
+    top: 0;
+    width: 24px;
+}
+
+.tbs-reauth-label {
+    font-size: 15px;
+    line-height: 36px;
+}
+
+.error-box {
+    background-color: #fdf2f2;
+    border: 1px solid #b20000;
+    border-radius: 4px;
+    color: #b20000;
+    font-size: 16px;
+    margin-bottom: 36px;
+    padding: 12px;
+}
+
+#tbs-services {
+    vertical-align: middle;
+    padding-bottom: 90px;
+}
+
+#tbs-services:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+#tbs-services img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.login-helpers {
+    display: table;
+    padding-bottom: 24px;
+    width: 100%;
+}
+
+.login-helpers #tbs-signin-remember label {
+    line-height: 18px;
+}
+
+.login-helpers #tbs-recovery-link {
+    padding-left: 12px;
+}
+
+.login-helpers #tbs-signin-remember, .login-helpers #tbs-recovery-link {
+    display: table-cell;
+}
+
+p, p[class] {
+    padding: 0;
+}
+
+hr {
+    box-sizing: border-box;
+    margin-top: 12px;
+}
+
+p, p.text-small {
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+ul {
+    -webkit-padding-start: 18px;
+    -moz-padding-start: 18px;
+    -ms-padding-start: 18px;
+    -o-padding-start: 18px;
+    -khtml-padding-start: 18px;
+    padding-start: 18px;
+}
+
+/* ------------------------------------------------------------------------ */
+/* Callback Tracking														*/
+/* ------------------------------------------------------------------------ */
+#callback-tracking {
+    height: 1px;
+    width: 1px;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* ------------------------------------------------------------------------ */
+/* Responsive breakpoints													*/
+/* ------------------------------------------------------------------------ */
+@media screen and (max-width: 639px) {
+    #tbs-header {
+        margin-bottom: 24px;
+    }
+
+    #tbs-header p, #tbs-nav p {
+        padding: 0;
+    }
+
+    #tbs-nav {
+        margin-top: 0;
+    }
+
+    #tbs-footer {
+        padding: 0px;
+    }
+
+    #tbs-footer .footer-content .pull-left, #tbs-footer .footer-content .pull-right {
+        float: none;
+    }
+
+    #tbs-footer .footer-content .pull-left {
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    #tbs-footer .footer-content .pull-right .pull-left {
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 0px;
+        padding-bottom: 12px;
+    }
+
+    #tbs-footer .footer-content a#data-protection {
+        margin-left: 0;
+    }
+
+    #tbs-headline h1 {
+        font-size: 27px;
+        font-weight: normal;
+        line-height: 32px;
+        margin-bottom: 24px;
+        text-align: left;
+    }
+
+    #tbs-headline h1.error {
+        font-size: 21px;
+        line-height: 25px;
+        margin-left: 34px;
+        margin-bottom: 24px;
+    }
+
+    #tbs-headline h1.error:before {
+        height: 28px;
+        left: 12px;
+        width: 28px;
+    }
+
+    #tbs-headline #tbs-brand {
+        padding-bottom: 24px;
+    }
+
+    #service-tiles {
+        height: auto;
+        text-align: left;
+    }
+
+    #service-tiles .tile {
+        width: 100%;
+        border-left: none;
+        border-right: none;
+    }
+
+    #service-tiles .tile:not(:last-child) {
+        border-bottom: none;
+    }
+
+    #service-tiles .tile .tile-content img {
+        padding-left: 0;
+    }
+
+    #service-tiles .tile .tile-content img, #service-tiles .tile .tile-content p {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .login-box {
+        font-size: 15px;
+        line-height: 18px;
+    }
+}
+
